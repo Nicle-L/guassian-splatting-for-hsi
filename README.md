@@ -29,29 +29,39 @@ To perform an overfitting-based hyperspectral image representation using differe
 ### Houston Dataset
 
 ```bash
-sh ./scripts/gaussianimage_cholesky/kodak.sh /path/to/your/dataset
-sh ./scripts/gaussianimage_rs/kodak.sh /path/to/your/dataset
-sh ./scripts/3dgs/kodak.sh /path/to/your/dataset'
+sh ./scripts/tran.sh /path/to/your/dataset                #for 2DGS reference[14]
+sh ./scripts/tran_only_color.sh /path/to/your/dataset     #for 2DGS + color weight W
+sh ./scripts/tran_hsi.sh /path/to/your/dataset            #for 2DGS + color weight W + adaptive resampling module
+sh ./scripts/tran_only_color.sh /path/to/your/dataset     #for 2DGS + color weight W + reusing cross-band information
+sh ./scripts/train_hsi_inter.sh /path/to/your/dataset     #for 2DGS + color weight W + adaptive resampling module + reusing cross-band information(GS-HSI)
 ```
 ### Botswana Dataset
 ```bash
-sh ./scripts/gaussianimage_cholesky/div2k.sh /path/to/your/dataset
-sh ./scripts/gaussianimage_rs/div2k.sh /path/to/your/dataset
-sh ./scripts/3dgs/div2k.sh /path/to/your/dataset
+sh ./scripts/tran.sh /path/to/your/dataset                #for 2DGS reference[14]
+sh ./scripts/tran_only_color.sh /path/to/your/dataset     #for 2DGS + color weight W
+sh ./scripts/tran_hsi.sh /path/to/your/dataset            #for 2DGS + color weight W + adaptive resampling module
+sh ./scripts/tran_only_color.sh /path/to/your/dataset     #for 2DGS + color weight W + reusing cross-band information
+sh ./scripts/train_hsi_inter.sh /path/to/your/dataset     #for 2DGS + color weight W + adaptive resampling module + reusing cross-band information(GS-HSI)
 ```
-## Image Compression
-After overfitting the image, we load the checkpoints from image representation and apply quantization-aware training to obtain the image compression results of GaussianImage models.
+## HSI Compression
+After overfitting the image, we load the checkpoints from the image representation and apply quantization-aware training to obtain the image compression results of GaussianImage models.
 
 ### Houston Dataset
 ```bash
-sh ./scripts/gaussianimage_cholesky/kodak_comp.sh /path/to/your/dataset
-sh ./scripts/gaussianimage_rs/kodak_comp.sh /path/to/your/dataset
-```
+sh ./scripts/train_quant.sh        /path/to/your/dataset         #for 2DGS reference[14] + attribute-aware quantization module
+sh ./scripts/train_quant_color.sh  /path/to/your/dataset         #for 2DGS + color weight W + attribute-aware quantization module
+sh ./scripts/train_quant_hsi.sh    /path/to/your/dataset         #for 2DGS + color weight W + adaptive resampling module + attribute-aware quantization module
+sh ./scripts/train_quant_band.sh   /path/to/your/dataset         #for 2DGS + color weight W+ reusing cross-band information + attribute-aware quantization module
+sh ./scripts/train_quant_inter.sh  /path/to/your/dataset         #for 2DGS + color weight W+ reusing cross-band information + adaptive resampling module + attribute-aware quantization module
+
+``` 
 ### Botswana Dataset
 ```bash
-DIV2K Dataset
-sh ./scripts/gaussianimage_cholesky/div2k_comp.sh /path/to/your/dataset
-sh ./scripts/gaussianimage_rs/div2k_comp.sh /path/to/your/dataset
+sh ./scripts/train_quant.sh        /path/to/your/dataset         #for 2DGS reference[14] + attribute-aware quantization module
+sh ./scripts/train_quant_color.sh  /path/to/your/dataset         #for 2DGS + color weight W + attribute-aware quantization module
+sh ./scripts/train_quant_hsi.sh    /path/to/your/dataset         #for 2DGS + color weight W + adaptive resampling module + attribute-aware quantization module
+sh ./scripts/train_quant_band.sh   /path/to/your/dataset         #for 2DGS + color weight W+ reusing cross-band information + attribute-aware quantization module
+sh ./scripts/train_quant_inter.sh  /path/to/your/dataset         #for 2DGS + color weight W+ reusing cross-band information + adaptive resampling module + attribute-aware quantization module
 ```
 Acknowledgments
 Our code is developed based on gsplat, a lightweight and modular Gaussian Splatting library.
