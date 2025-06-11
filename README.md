@@ -33,7 +33,7 @@ To perform an overfitting-based hyperspectral image representation using differe
 ### Houston Dataset
 
 ```bash
-sh ./scripts/tran.sh /path/to/your/dataset                #for 2DGS reference[14]
+sh ./scripts/tran.sh /path/to/your/dataset                #for 2DGS
 sh ./scripts/tran_only_color.sh /path/to/your/dataset     #for 2DGS + color weight W
 sh ./scripts/tran_hsi.sh /path/to/your/dataset            #for 2DGS + color weight W + adaptive resampling module
 sh ./scripts/tran_only_color.sh /path/to/your/dataset     #for 2DGS + color weight W + reusing cross-band information
@@ -41,7 +41,7 @@ sh ./scripts/train_hsi_inter.sh /path/to/your/dataset     #for 2DGS + color weig
 ```
 ### Botswana Dataset
 ```bash
-sh ./scripts/tran.sh /path/to/your/dataset                #for 2DGS reference[14]
+sh ./scripts/tran.sh /path/to/your/dataset                #for 2DGS 
 sh ./scripts/tran_only_color.sh /path/to/your/dataset     #for 2DGS + color weight W
 sh ./scripts/tran_hsi.sh /path/to/your/dataset            #for 2DGS + color weight W + adaptive resampling module
 sh ./scripts/tran_only_color.sh /path/to/your/dataset     #for 2DGS + color weight W + reusing cross-band information
@@ -52,7 +52,7 @@ After overfitting the image, we load the checkpoints from the image representati
 
 ### Houston Dataset
 ```bash
-sh ./scripts/train_quant.sh        /path/to/your/dataset         #for 2DGS reference[14] + attribute-aware quantization module
+sh ./scripts/train_quant.sh        /path/to/your/dataset         #for 2DGS + attribute-aware quantization module
 sh ./scripts/train_quant_color.sh  /path/to/your/dataset         #for 2DGS + color weight W + attribute-aware quantization module
 sh ./scripts/train_quant_hsi.sh    /path/to/your/dataset         #for 2DGS + color weight W + adaptive resampling module + attribute-aware quantization module
 sh ./scripts/train_quant_band.sh   /path/to/your/dataset         #for 2DGS + color weight W+ reusing cross-band information + attribute-aware quantization module
@@ -60,7 +60,7 @@ sh ./scripts/train_quant_inter.sh  /path/to/your/dataset         #for 2DGS + col
 ```
 ### Botswana Dataset
 ```bash
-sh ./scripts/train_quant.sh        /path/to/your/dataset         #for 2DGS reference[14] + attribute-aware quantization module
+sh ./scripts/train_quant.sh        /path/to/your/dataset         #for 2DGS + attribute-aware quantization module
 sh ./scripts/train_quant_color.sh  /path/to/your/dataset         #for 2DGS + color weight W + attribute-aware quantization module
 sh ./scripts/train_quant_hsi.sh    /path/to/your/dataset         #for 2DGS + color weight W + adaptive resampling module + attribute-aware quantization module
 sh ./scripts/train_quant_band.sh   /path/to/your/dataset         #for 2DGS + color weight W+ reusing cross-band information + attribute-aware quantization module
