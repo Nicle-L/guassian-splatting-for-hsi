@@ -5,6 +5,10 @@
 Our `gsplat` library is developed based on the open-source implementation from [nerfstudio-project/gsplat](https://github.com/nerfstudio-project/gsplat).  
 This is a concise and easily extensible Gaussian Splatting library, which we further adapted for image compression tasks.
 
+## Dataset
+File shared via Netflix: dataset_gs 
+Link: https://pan.baidu.com/s/1npBgk8BQm2C-nBmpqzHTQw?pwd=iaca Extract code: iaca
+
 ## Environment & Dependencies
 
 To set up the environment, make sure the following Python packages are installed:
@@ -22,7 +26,7 @@ You can install them via pip:
 ```bash
 pip install numpy/pandas/ pillow/ pytorch-msssim/ PyYAML/ tqdm/ vector-quantize-pytorch/
 ```
-## Image Representation
+## HSI Representation
 
 To perform an overfitting-based hyperspectral image representation using different variants of the “GS-HSI” model, run the following script:
 
