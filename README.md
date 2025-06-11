@@ -57,8 +57,7 @@ sh ./scripts/train_quant_color.sh  /path/to/your/dataset         #for 2DGS + col
 sh ./scripts/train_quant_hsi.sh    /path/to/your/dataset         #for 2DGS + color weight W + adaptive resampling module + attribute-aware quantization module
 sh ./scripts/train_quant_band.sh   /path/to/your/dataset         #for 2DGS + color weight W+ reusing cross-band information + attribute-aware quantization module
 sh ./scripts/train_quant_inter.sh  /path/to/your/dataset         #for 2DGS + color weight W+ reusing cross-band information + adaptive resampling module + attribute-aware quantization module
-
-``` 
+```
 ### Botswana Dataset
 ```bash
 sh ./scripts/train_quant.sh        /path/to/your/dataset         #for 2DGS reference[14] + attribute-aware quantization module
@@ -68,7 +67,7 @@ sh ./scripts/train_quant_band.sh   /path/to/your/dataset         #for 2DGS + col
 sh ./scripts/train_quant_inter.sh  /path/to/your/dataset         #for 2DGS + color weight W+ reusing cross-band information + adaptive resampling module + attribute-aware quantization module
 ```
 
-##BD-Rate、BD-PSNR(dB)、BD-MS-SSIM(dB)
+### BD-Rate、BD-PSNR(dB)、BD-MS-SSIM(dB)
 
 Table 1: BD-RATE (%), BD-PSNR (dB), and BD-MS-SSIM (dB) Performance Comparison on the Botswana Dataset
 | Method         | BD-Rate (%) | BD-PSNR (dB) | BD-MS-SSIM (dB) |
